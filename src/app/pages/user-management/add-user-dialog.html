@@ -1,0 +1,35 @@
+<mat-card class="add-card">
+  <mat-card-title>Add User</mat-card-title>
+  <mat-card-content>
+    <form class="signup-form" (ngSubmit)="saveUser()" [formGroup]="userForm">
+      <p>
+        <mat-form-field>
+          <input type="text" formControlName="email" matInput placeholder="Enter your email">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input type="text" matInput formControlName="name" placeholder="Enter your name">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-radio-group formControlName="gender" aria-label="Gender" name="Gender">
+          <mat-radio-button [value]="'male'">Male</mat-radio-button>
+          <mat-radio-button [value]="'female'">Female</mat-radio-button>
+        </mat-radio-group>
+      </p>
+      <p>
+        <mat-form-field>
+          <input type="password" formControlName="password" matInput placeholder="Password">
+        </mat-form-field>
+      </p>
+
+      <div class="button">
+        <button type="submit"  mat-button>Add</button>
+      </div>
+      <div style="text-align: center;">
+        <a (click)="close()">Close</a>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

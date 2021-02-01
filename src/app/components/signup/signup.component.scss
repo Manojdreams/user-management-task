@@ -1,0 +1,13 @@
+ :host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+}
+
+.signup-card{
+  background-color: #197dad;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
